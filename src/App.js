@@ -4,6 +4,7 @@ import Characters from "./components/charachters/Characters";
 import Character from "./components/charachters/charachter/Charachter";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+
 function App() {
   return (
     <Router>
