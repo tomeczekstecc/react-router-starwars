@@ -4,7 +4,7 @@ import globalStyles from '../../styles/globalStyles'
 
 const Spinner = () => {
   return (
-    <div style={globalStyles.spinner}>
+    <div className='main-container' style={globalStyles.spinner}>
       <img src={spinner} alt=""/>
     </div>
   );
