@@ -1,0 +1,14 @@
+@font-face{
+  font-family: 'nunito-regular';
+  src: url('../resources/fonts/Nunito-Regular.ttf') format('truetype')
+}
+@font-face{
+  font-family: 'nunito-bold';
+  src: url('../resources/fonts/Nunito-Bold.ttf') format('truetype')
+}
+body{
+ font-family: 'nunito-regular', Fallback, sans-serif;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
