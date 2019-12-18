@@ -40,11 +40,16 @@ const Nav = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant='h6' className={classes.title}>
-            News
+            StarWarsApi
           </Typography>
           <Button color='inherit'>
-            <Link className={classes.link}  to='characters'>
+            <Link className={classes.link}  to='/characters'>
               Characters
+            </Link>
+          </Button>
+          <Button color='inherit'>
+            <Link className={classes.link}  to='/'>
+              Home
             </Link>
           </Button>
         </Toolbar>

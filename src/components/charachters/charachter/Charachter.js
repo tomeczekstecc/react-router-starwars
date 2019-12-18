@@ -1,5 +1,6 @@
 import React, { useEffect, useState, Fragment } from 'react';
 import Spinner from '../../layout/Spinner';
+import Nav from '../../layout/Nav'
 
 const Character = ({ match }) => {
   useEffect(() => {
@@ -25,6 +26,7 @@ const Character = ({ match }) => {
     <Spinner />
   ) : (
     <Fragment>
+      <Nav/>
       <div className='main-container'>
         <h3>
           See API detail on <span>{character.name}</span> :{' '}
