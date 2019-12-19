@@ -1,7 +1,8 @@
 const globalStyles = {
   spinner: {
-    marginTop: '35vh'
+    marginTop: "30vh"
   }
+  
 };
 
-export default globalStyles
+export default globalStyles;

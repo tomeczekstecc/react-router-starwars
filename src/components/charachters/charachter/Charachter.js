@@ -34,7 +34,8 @@ const Character = ({ match }) => {
         <p>Mass: {character.mass}</p>
         <p>Height: {character.height}</p>
         <p>Hair color: {character.hair_color}</p>
-        <p>page: {character.url}</p>
+          <p>Birth year: {character.birth_year}</p>
+          <p>page: <a target="_blank" href={character.url}>{character.url}</a></p>
       </div>
     </Fragment>
   );

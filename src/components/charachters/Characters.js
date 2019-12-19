@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import Spinner from "../layout/Spinner";
 import Nav from "../layout/Nav";
 import NavButton from "./NavButton";
+import Box from "@material-ui/core/Box";
 
 const Characters = () => {
   useEffect(() => {
     getPeople();
     nextPage();
-
   }, []);
   const [people, setPeople] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,6 +16,7 @@ const Characters = () => {
   const [page, setPage] = useState(1);
 
   const getPeople = async () => {
+    const onPage = page * 10;
     await fetch(`https://swapi.co/api/people?page=${page}`)
       .then(res => res.json())
       .then(res => {
@@ -26,18 +27,22 @@ const Characters = () => {
       });
     setLoading(false);
   };
-  const nextPage = async() => {
+  const nextPage = async () => {
     setLoading(true);
     setPage(page + 1);
-     await getPeople();
+    await getPeople();
   };
   const prevPage = async () => {
     setLoading(true);
     setPage(page - 1);
     await getPeople();
-
   };
 
+  const styles = {
+    box: {
+      display: 'none'
+    }
+  }
   return loading ? (
     <Spinner />
   ) : (
@@ -61,10 +66,16 @@ const Characters = () => {
           </div>
         ))}
       </div>
-        <NavButton offset='right' text="Next" actionPage={nextPage} />
-        <NavButton offset='left' text="Prev" actionPage={prevPage} prevPage={prevPage}/>
+      <Box component="div">
+        <NavButton offset="right" text="Next" actionPage={nextPage} />
+      </Box>
+
+      <Box component="div">
+        <NavButton offset="left" text="Prev" actionPage={prevPage} />
+      </Box>
     </Fragment>
   );
 };
+
 
 export default Characters;
