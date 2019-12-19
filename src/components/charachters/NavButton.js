@@ -10,7 +10,7 @@ const NavButton = ({ actionPage, text, offset }) => {
       },
       position: "fixed",
       top: "40vh",
-      [offset]: "35vw"
+      [offset]: "25vw"
     }
   }));
 
