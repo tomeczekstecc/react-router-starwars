@@ -10,7 +10,7 @@ const NavButton = ({ actionPage, text, offset }) => {
       },
       position: "fixed",
       top: "40vh",
-      [offset]: "30vw"
+      [offset]: "35vw"
     }
   }));
 
@@ -22,7 +22,7 @@ const NavButton = ({ actionPage, text, offset }) => {
         onClick={() => actionPage()}
         className={classes.button}
         variant="contained"
-        color="default"
+        color="primary"
       >
         {text}
       </Button>
